@@ -5,12 +5,12 @@ export default function LoginPage() {
     <div className="flex min-h-screen bg-white">
       {/* Kiri - Form Login */}
       <div className="flex flex-col justify-center w-full max-w-md p-8 mx-auto lg:w-1/2">
-        <h1 className="mb-6 text-3xl font-bold text-gray-600">Masuk ke Akun Anda</h1>
+        <h1 className="mb-6 text-3xl font-bold text-gray-600">Daftar Akun Anda</h1>
 
         <div className="flex gap-3 mb-6">
           <button className="flex-1 flex items-center justify-center gap-2 border border-[#269DD8] rounded-lg py-2 hover:bg-[#269DD8BB] text-gray-600">
             <img src="/google.svg" alt="Google" className="w-5 h-5" />
-            Masuk dengan Google
+            Daftar dengan Google
           </button>
         </div>
 
@@ -22,6 +22,14 @@ export default function LoginPage() {
 
         <form className="flex flex-col gap-4">
           <div>
+            <label className="text-sm text-gray-400">Nama Lengkap</label>
+            <input
+              type="text"
+              placeholder="Masukkan nama lengkap Anda"
+              className="w-full mt-1 px-4 py-2 bg-white border border-[#269DD8] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#269DD8] text-gray-600"
+            />
+          </div>
+          <div>
             <label className="text-sm text-gray-400">Email</label>
             <input
               type="email"
@@ -32,24 +40,38 @@ export default function LoginPage() {
 
           <PasswordInput/>
 
-          <div className="flex items-center justify-between text-sm">
-            <a href="#" className="text-[#269DD8] hover:underline">
-              Lupa kata sandi?
-            </a>
+          {/* ✅ Checkbox Persetujuan */}
+          <div className="flex items-start mt-2">
+            <input
+              type="checkbox"
+              id="privacyPolicy"
+              className="mt-1 h-4 w-4 text-[#269DD8] border-gray-300 rounded focus:ring-[#269DD8]"
+              required
+            />
+            <label htmlFor="privacyPolicy" className="ml-2 text-sm text-gray-500">
+              Saya telah membaca dan menyetujui{' '}
+              <a href="/kebijakan-privasi" className="text-[#269DD8] hover:underline">
+                Kebijakan Privasi
+              </a>{' '}
+              dan{' '}
+              <a href="/syarat-ketentuan" className="text-[#269DD8] hover:underline">
+                Syarat & Ketentuan
+              </a>.
+            </label>
           </div>
 
           <button
             type="submit"
             className="w-full py-2 mt-2 bg-[#269DD8] rounded-lg hover:bg-[#269DD8BB] font-semibold text-white"
           >
-            Masuk
+            Buat Akun
           </button>
         </form>
 
         <p className="mt-6 text-sm text-gray-400 text-center">
-          Belum punya akun?{" "}
-          <a href="/register" className="text-[#269DD8] hover:underline">
-            Daftar Sekarang
+          Sudah punya akun?{" "}
+          <a href="/login" className="text-[#269DD8] hover:underline">
+            Masuk Sekarang
           </a>
         </p>
       </div>

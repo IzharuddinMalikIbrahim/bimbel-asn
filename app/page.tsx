@@ -1,30 +1,30 @@
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-8 py-4 bg-gray-950/70 backdrop-blur border-b border-gray-800 sticky top-0 z-10">
-        <h1 className="text-2xl font-bold text-blue-500">BimbelASN</h1>
+      <nav className="flex justify-between items-center px-8 py-4 bg-white backdrop-blur sticky top-0 z-10">
+        <h1 className="text-2xl font-bold text-[#269DD8]">Bimbel<span className="text-[#DE1D5E]">ASN</span></h1>
         <div className="hidden md:flex items-center gap-6">
-          <a href="#features" className="hover:text-blue-400">Fitur</a>
-          <a href="#testimoni" className="hover:text-blue-400">Testimoni</a>
-          <a href="#pricing" className="hover:text-blue-400">Paket</a>
-          <a href="#contact" className="hover:text-blue-400">Kontak</a>
+          <a href="#features" className="text-[#269DD8] font-semibold hover:text-[#269dd8bb]">Fitur</a>
+          <a href="#testimoni" className="text-[#269DD8] font-semibold hover:text-[#269dd8bb]">Testimoni</a>
+          <a href="#pricing" className="text-[#269DD8] font-semibold hover:text-[#269dd8bb]">Paket</a>
+          <a href="#contact" className="text-[#269DD8] font-semibold hover:text-[#269dd8bb]">Kontak</a>
         </div>
         <a
-          href="/login"
-          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold"
+          href="/register"
+          className="bg-[#269DD8] hover:bg-[#269dd8bb] text-white px-4 py-2 rounded-lg font-semibold"
         >
           Daftar Sekarang
         </a>
       </nav>
 
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between px-10 md:px-20 py-20">
+      <section className="flex flex-col md:flex-row items-center justify-between px-10 md:px-20">
         <div className="md:w-1/2 space-y-6">
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Kuasai <span className="text-blue-500">Materi ASN</span> dengan Mudah dan Terarah!
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-600">
+            Kuasai <span className="text-[#269DD8]">Materi ASN</span> dengan Mudah dan Terarah!
           </h2>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg text-gray-600">
             Persiapkan diri menghadapi seleksi ASN dengan metode belajar efektif, 
             latihan soal terbaru, dan bimbingan dari mentor berpengalaman.
             100% sesuai dengan ujian resmi ASN.
@@ -32,13 +32,13 @@ export default function HomePage() {
           <div className="flex gap-4">
             <a
               href="/login"
-              className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold"
+              className="bg-[#269DD8] hover:bg-[#269dd8bb] text-white px-6 py-3 rounded-lg font-semibold"
             >
               Mulai Belajar Sekarang
             </a>
             <a
               href="#features"
-              className="border border-gray-600 hover:border-blue-500 hover:text-blue-400 px-6 py-3 rounded-lg font-semibold"
+              className="border border-[#DE1D5E] text-[#DE1D5E] hover:border-[#de1d5dbb] hover:text-[#de1d5dbb] px-6 py-3 rounded-lg font-semibold"
             >
               Lihat Fitur
             </a>
@@ -47,32 +47,35 @@ export default function HomePage() {
 
         <div className="md:w-1/2 mt-10 md:mt-0">
           <img
-            src="https://illustrations.popsy.co/white/study.svg"
+            src="/ic-learning-illustration.svg"
             alt="Belajar ASN"
-            className="w-full"
+            className="w-full h-auto"
           />
         </div>
       </section>
 
       {/* Features */}
-      <section id="features" className="px-10 md:px-20 py-20 bg-gray-800">
-        <h3 className="text-3xl font-bold mb-10 text-center">Fitur Unggulan</h3>
+      <section id="features" className="px-10 md:px-20 py-20 md:mx-20 bg-white rounded-4xl shadow-gray-200 shadow-md">
+        <h3 className="text-3xl font-bold mb-10 text-center text-[#269DD8]">Fitur Unggulan</h3>
         <div className="grid md:grid-cols-3 gap-10 text-center">
-          <div className="p-6 bg-gray-900 rounded-2xl border border-gray-700">
-            <h4 className="text-xl font-semibold mb-3">Materi Terupdate</h4>
-            <p className="text-gray-400">
+          <div className="p-6 ">
+            <img src='/ic-materi.svg' className='w-16 h-16 mx-auto mb-3' />
+            <h4 className="text-xl font-semibold mb-3 text-black">Materi Terupdate</h4>
+            <p className="text-gray-600 font-extralight">
               Materi disesuaikan dengan kisi-kisi resmi seleksi ASN terbaru.
             </p>
           </div>
-          <div className="p-6 bg-gray-900 rounded-2xl border border-gray-700">
-            <h4 className="text-xl font-semibold mb-3">Latihan Soal Interaktif</h4>
-            <p className="text-gray-400">
+          <div className="p-6">
+            <img src='/ic-interactive.svg' className='w-16 h-16 mx-auto mb-3' />
+            <h4 className="text-xl font-semibold mb-3 text-black">Latihan Soal Interaktif</h4>
+            <p className="text-gray-600 font-extralight">
               Puluhan ribu soal latihan lengkap dengan pembahasan terperinci.
             </p>
           </div>
-          <div className="p-6 bg-gray-900 rounded-2xl border border-gray-700">
-            <h4 className="text-xl font-semibold mb-3">Simulasi CAT Online</h4>
-            <p className="text-gray-400">
+          <div className="p-6">
+            <img src='/ic-cat.svg' className='w-16 h-16 mx-auto mb-3' />
+            <h4 className="text-xl font-semibold mb-3 text-black">Simulasi CAT Online</h4>
+            <p className="text-gray-600 font-extralight">
               Rasakan pengalaman ujian seperti tes ASN sesungguhnya.
             </p>
           </div>
@@ -81,7 +84,7 @@ export default function HomePage() {
 
       {/* Testimoni */}
       <section id="testimoni" className="px-10 md:px-20 py-20">
-        <h3 className="text-3xl font-bold mb-10 text-center">Apa Kata Peserta Kami</h3>
+        <h3 className="text-3xl font-bold mb-10 text-center text-[#269DD8]">Apa Kata Peserta Kami</h3>
         <div className="grid md:grid-cols-3 gap-10">
           {[
             {
@@ -97,34 +100,34 @@ export default function HomePage() {
               text: "Simulasi CAT-nya mirip banget dengan ujian asli. Bikin lebih siap mental!",
             },
           ].map((t, i) => (
-            <div key={i} className="p-6 bg-gray-800 rounded-2xl border border-gray-700">
-              <p className="text-gray-300 mb-4">“{t.text}”</p>
-              <p className="font-semibold text-blue-400">— {t.nama}</p>
+            <div key={i} className="p-6 bg-white rounded-2xl border border-[#269DD8] shadow-md shadow-gray-200">
+              <p className="text-gray-600 mb-4">“{t.text}”</p>
+              <p className="font-semibold text-gray-600">— {t.nama}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="px-10 md:px-20 py-20 bg-gray-800">
-        <h3 className="text-3xl font-bold mb-10 text-center">Paket Belajar</h3>
+      <section id="pricing" className="px-10 md:px-20 bg-white">
+        <h3 className="text-3xl font-bold mb-10 text-center text-[#269DD8]">Paket Belajar</h3>
         <div className="grid md:grid-cols-3 gap-10 text-center">
           {[
             { nama: "Basic", harga: "Rp99.000", fitur: ["Materi dasar ASN", "Latihan soal 500+", "Akses 30 hari"] },
             { nama: "Pro", harga: "Rp199.000", fitur: ["Semua materi ASN", "Soal 2.000+", "Akses 90 hari", "Simulasi CAT"] },
             { nama: "Premium", harga: "Rp299.000", fitur: ["Semua fitur Pro", "Kelas Live", "Mentor 1-on-1", "Akses 1 tahun"] },
           ].map((p, i) => (
-            <div key={i} className="p-8 bg-gray-900 rounded-2xl border border-gray-700 hover:border-blue-500 transition">
-              <h4 className="text-xl font-bold mb-2">{p.nama}</h4>
-              <p className="text-3xl font-extrabold text-blue-500 mb-6">{p.harga}</p>
-              <ul className="space-y-2 text-gray-300 mb-6">
+            <div key={i} className="p-8 bg-white rounded-2xl border border-[#DE1D5E] hover:border-[#de1d5dbb] transition shadow-md shadow-gray-200">
+              <h4 className="text-xl font-bold mb-2 text-gray-600">{p.nama}</h4>
+              <p className="text-3xl font-extrabold text-[#DE1D5E] mb-6">{p.harga}</p>
+              <ul className="space-y-2 text-gray-600 mb-6">
                 {p.fitur.map((f, j) => (
                   <li key={j}>✅ {f}</li>
                 ))}
               </ul>
               <a
-                href="#daftar"
-                className="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold"
+                href="/login"
+                className="inline-block bg-[#269DD8] hover:bg-[#269DD8BB] text-white px-6 py-3 rounded-lg font-semibold"
               >
                 Pilih Paket
               </a>
@@ -134,9 +137,9 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-950 py-10 text-center text-gray-400 text-sm border-t border-gray-800">
+      <footer id="contact" className="bg-white py-10 text-center text-gray-400 text-sm">
         <p>
-          © {new Date().getFullYear()} <span className="text-blue-400 font-semibold">BimbelASN</span>. 
+          © {new Date().getFullYear()} <span className="text-[#269DD8] font-semibold">Bimbel<span className="text-[#DE1D5E]">ASN</span></span>. 
           Semua Hak Dilindungi.
         </p>
       </footer>
