@@ -1,6 +1,11 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
 import PasswordInput from '../../components/passwordinput';
 
 export default function LoginPage() {
+  const router = useRouter();
+  
   return (
     <div className="flex min-h-screen bg-white">
       {/* Kiri - Form Login */}
@@ -20,7 +25,10 @@ export default function LoginPage() {
           <div className="flex-grow border-t border-gray-700"></div>
         </div>
 
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={(e) => {
+          e.preventDefault(); // cegah reload halaman
+          router.push('/dashboard');
+        }}>
           <div>
             <label className="text-sm text-gray-400">Email</label>
             <input
